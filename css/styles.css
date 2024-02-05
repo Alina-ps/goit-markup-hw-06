@@ -89,6 +89,7 @@ img {
   background-color: #ffffff;
   font-size: 56px;
   width: 1440px;
+  /* width: 320px; */
   text-align: center;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -213,30 +214,49 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office1.jpg);
+    url(../images/people-office-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-weight: 700;
   font-size: 56px;
-  max-width: 1440px;
-  padding: 188px 0;
+  /* max-width: 1440px; desktop */
+  max-width: 320px;
+  /* padding: 188px 0; desktop */
+  padding: 72px 0;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .page-title {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob-2x.jpg);
+  }
 }
 
 .page-title .container {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  max-width: 496px;
+  /* max-width: 496px; desktop */
+  max-width: 216px;
 }
 
 .heading-first {
   color: #ffffff;
   font-weight: 700;
-  font-size: 56px;
+  /* font-size: 56px; desktop */
+  font-size: 36px;
   text-align: center;
-  max-width: 496px;
-  height: 120px;
+  /* max-width: 496px; desktop */
+  max-width: 216px;
+  /* height: 120px; desktop */
+  height: 160px;
 }
 
 .page-button {
@@ -250,12 +270,15 @@ img {
   line-height: 1.5;
   letter-spacing: 0.64px;
   cursor: pointer;
-  margin-left: 160px;
-  margin-right: 160px;
+  /* margin-left: 160px;
+  margin-right: 160px; desktop */
+  margin-right: auto;
+  margin-left: auto;
   min-width: 169px;
   height: 56px;
   padding: 16px 32px;
-  margin-top: 48px;
+  /* margin-top: 48px; desktop */
+  margin-top: 88px;
   display: block;
   box-shadow: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -271,7 +294,16 @@ img {
 /* .............section features................ */
 
 .section-features {
-  width: 1440px;
+  /* width: 1440px; desktop */
+  width: 320px;
+  padding: 96px 0;
+}
+
+/* added for mobile version */
+.section-features .container {
+  margin-right: 16px;
+  margin-left: 16px;
+  width: 288px;
 }
 
 .section-features .visually-hidden {
@@ -289,14 +321,17 @@ img {
 
 .section-features .list {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; desktop */
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  /* gap: 24px; desktop */
+  gap: 72px;
   text-align: left;
 }
 
 .section-features .list-item {
-  width: calc((100% - 3 * 24px) / 4);
+  /* width: calc((100% - 3 * 24px) / 4); desktop */
+  width: 100%;
 }
 
 .container-features-icon {
@@ -308,15 +343,24 @@ img {
   height: 112px;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .section-features .heading-third {
   margin-bottom: 8px;
+  /* added for mobile ver */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .section-features .paragraf {
   text-align: left;
-  width: 264px;
+  /* width: 264px; desktop */
+  width: 288px;
   height: 72px;
   padding-bottom: 0;
 }
@@ -326,8 +370,18 @@ img {
 
 .section-team {
   background-color: #f4f4fd;
-  width: 1440px;
+  /* width: 1440px; desktop */
+  width: 320px;
   text-align: center;
+  padding-bottom: 96px;
+  padding-top: 96px;
+}
+
+/* for mobile version */
+.section-team .container {
+  width: 264px;
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 .section-team .heading-second {
@@ -338,14 +392,17 @@ img {
 
 .section-team .list {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; desktop */
+  flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  /* gap: 24px; desktop */
+  gap: 72px;
 }
 
 .team-list {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4);  desktop */
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -407,22 +464,35 @@ img {
 .section-portfolio {
   background-color: #ffffff;
   padding-top: 0;
-  padding-bottom: 120px;
-  padding-top: 120px;
-  width: 1440px;
+  /* padding-bottom: 120px; desktop */
+  padding-bottom: 96px;
+  /* padding-top: 120px; desktop */
+  padding-top: 96px;
+  /* width: 1440px; desktop */
+  width: 320px;
+}
+
+/* for mobile version */
+.section-portfolio .container {
+  width: 288px;
+  margin-left: calc((320px - 288px) / 2);
+  margin-right: calc((320px - 288px) / 2);
 }
 
 .section-portfolio .heading-second {
-  margin-bottom: 72px;
+  /* margin-bottom: 72px; desktop */
+  margin-bottom: 52px;
   text-align: center;
   border-top: none;
 }
 
 .section-portfolio .portfolio-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  /* justify-content: center;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 48px 24px; desktop */
 }
 
 .section-portfolio .list-img {
@@ -430,8 +500,10 @@ img {
   flex-direction: column;
   text-align: left;
   background-color: #ffffff;
-  height: 420px;
-  width: calc((100% - 48px) / 3);
+  /* height: 420px; desktop */
+  height: 400px;
+  /* width: calc((100% - 48px) / 3); desktop */
+  width: 100%;
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -492,33 +564,48 @@ img {
 
 .page-footer {
   background-color: #2e2f42;
-  width: 1440px;
-  padding: 100px 0;
+  /* width: 1440px; desktop */
+  width: 320px;
+  /* padding: 100px 0; desktop */
+  padding: 96px 0;
 }
 
 .page-footer .container-footer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 72px;
+  margin-left: 16px;
+  margin-right: 16px;
+  justify-content: center;
+  align-items: center;
+  /* align-items: baseline; */
+  width: 288px;
 }
 
 .page-footer .container-logo {
-  text-align: left;
+  /* text-align: left; desktop */
+  text-align: center;
   font-size: 0;
-  margin-right: 120px;
+  width: 288px;
+  /* margin-right: 120px; desktop */
 }
 
 .page-footer .logo {
   color: #4d5ae5;
-  text-align: left;
+  /* text-align: left; desktop */
+  text-align: center;
   display: inline-block;
   margin-bottom: 16px;
   width: 115px;
-  height: 21px;
+  height: 24px;
+  /* added below for mibole version */
+  margin-right: 0;
 }
 
 .page-footer .studio-logo {
   color: #f4f4fd;
-  text-align: left;
+  /* text-align: left; desktop */
+  text-align: center;
 }
 
 .page-footer .paragraf {
@@ -530,7 +617,7 @@ img {
 
 .page-footer .container-soc {
   width: 208px;
-  height: 40px;
+  height: 80px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -543,6 +630,9 @@ img {
   height: 24px;
   margin-bottom: 16px;
   color: #ffffff;
+  /* added below for mobile version */
+  width: 208px;
+  text-align: center;
 }
 
 .footer-soc-list {
@@ -550,6 +640,7 @@ img {
   gap: 16px;
   width: 208px;
   align-items: center;
+  justify-content: center;
 }
 
 .footer-soc-item {
@@ -582,7 +673,10 @@ img {
 .container-subscr {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  /* added for mobile version */
+  width: 288px;
+  height: 136px;
 }
 
 .subscr-paragraf {
@@ -592,13 +686,18 @@ img {
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
+  /* below text-align is added for mobile ver */
+  text-align: center;
 }
 
 .subscr-form {
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 24px;
+  /* gap: 24px; desktop */
+  gap: 16px;
+  /* added flex-direc for mobile version */
+  flex-direction: column;
 }
 
 .subscr-label {
@@ -610,10 +709,13 @@ img {
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  width: 264px;
+  /* width: 264px; desktop */
+  width: 288px;
   height: 40px;
   font-size: 12px;
   padding-left: 16px;
+  /* padding-right is for mobile version */
+  /* padding-right: 16px; */
   color: #fff;
   font-size: 12px;
   font-weight: 400;
@@ -647,7 +749,7 @@ img {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  margin-left: 24px;
+  /* margin-left: 24px; desktop */
   padding: 8px 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -916,3 +1018,380 @@ img {
 }
 
 /* ..................................... */
+
+/* ............TABLET VERSION............ */
+
+@media screen and (min-width: 768px) {
+  /* .............page title................ */
+  .page-title {
+    max-width: 768px;
+    padding: 112px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .page-title {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tab-2x.jpg);
+    }
+  }
+
+  .page-title .container {
+    max-width: 496px;
+  }
+
+  .heading-first {
+    font-size: 56px;
+    max-width: 496px;
+    height: 120px;
+  }
+
+  .page-button {
+    margin-top: 36px;
+  }
+  /* ..................................... */
+  /* .............section features.... */
+  .section-features {
+    width: 768px;
+    padding: 96px 16px;
+  }
+
+  .section-features .container {
+    margin-right: 0;
+    margin-left: 0;
+    width: 736px;
+  }
+
+  .section-features .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .section-features .list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .section-features .heading-third {
+    text-align: left;
+  }
+
+  .section-features .paragraf {
+    font-weight: 500;
+    width: 356px;
+  }
+  /* ................................. */
+  /* .............section team... .... */
+  .section-team {
+    width: 768px;
+  }
+
+  .section-team .container {
+    width: 528px;
+    margin-left: 108px;
+    margin-right: 108px;
+  }
+
+  .section-team .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .team-list {
+    width: calc((100% - 24px) / 2);
+  }
+
+  /* ................................. */
+
+  /* ........section portfolio....... */
+  .section-portfolio {
+    width: 768px;
+  }
+
+  .section-portfolio .container {
+    width: 736px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .section-portfolio .heading-second {
+    margin-bottom: 72px;
+  }
+
+  .section-portfolio .portfolio-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .section-portfolio .list-img {
+    height: 420px;
+    width: calc((100% - 24px) / 2);
+  }
+
+  /* ............................... */
+  /* .............page footer................ */
+  .page-footer {
+    width: 768px;
+  }
+
+  .page-footer > .container {
+    margin-left: 108px;
+  }
+
+  .page-footer .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 72px 24px;
+  }
+
+  .page-footer .container-logo {
+    text-align: left;
+    font-size: 0;
+    width: 264px;
+  }
+
+  .page-footer .logo {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 16px;
+    width: 115px;
+    height: 24px;
+  }
+
+  .page-footer .paragraf-soc {
+    width: 264px;
+    text-align: left;
+  }
+
+  .container-subscr {
+    display: flex;
+    width: 453px;
+    height: 80px;
+  }
+
+  .subscr-paragraf {
+    text-align: left;
+  }
+
+  .subscr-form {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    gap: 24px;
+  }
+
+  .subscr-input {
+    width: 264px;
+    height: 40px;
+  }
+}
+
+/* ..................................... */
+
+/* ............DESKTOP VERSION............ */
+
+@media screen and (min-width: 1158px) {
+  /* .............page title................ */
+  .page-title {
+    max-width: 1440px;
+    padding: 188px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .page-title {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office1-2x.jpg);
+    }
+  }
+
+  .page-button {
+    margin-top: 48px;
+  }
+  /* ..................................... */
+  /* ........section features........ */
+  .section-features {
+    width: 1440px;
+    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .section-features .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  .section-features .list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .section-features .list-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .container-features-icon {
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+    height: 112px;
+    justify-content: center;
+    align-items: center;
+    display: visible;
+  }
+
+  .section-features .heading-third {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-align: left;
+  }
+
+  .section-features .paragraf {
+    font-weight: 400;
+    width: 264px;
+  }
+  /* ................................. */
+
+  /* .............section team... .... */
+  .section-team {
+    width: 1440px;
+  }
+
+  .section-team .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-team .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .team-list {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ................................. */
+
+  /* ........section portfolio....... */
+  .section-portfolio {
+    padding-bottom: 120px;
+    padding-top: 120px;
+    width: 1440px;
+  }
+
+  .section-portfolio .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-portfolio .heading-second {
+    margin-bottom: 72px;
+  }
+
+  .section-portfolio .portfolio-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+  }
+
+  .section-portfolio .list-img {
+    height: 420px;
+    width: calc((100% - 48px) / 3);
+  }
+
+  /* ............................... */
+  /* .............page footer................ */
+  .page-footer {
+    width: 1440px;
+    padding: 100px 0;
+  }
+
+  .page-footer > .container {
+    margin-left: 156px;
+    margin-right: 156px;
+  }
+
+  .page-footer .container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    /* gap: 72px 24px; */
+    gap: 0;
+  }
+
+  .page-footer .container-logo {
+    margin-right: 120px;
+  }
+
+  .page-footer .studio-logo {
+    text-align: left;
+  }
+
+  .page-footer .paragraf-soc {
+    width: 100%;
+  }
+
+  .container-subscr {
+    display: flex;
+    margin-left: 80px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .subscr-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .subscr-input {
+    width: 264px;
+  }
+}
