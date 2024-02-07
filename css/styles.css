@@ -88,12 +88,14 @@ img {
 .page-header {
   background-color: #ffffff;
   font-size: 56px;
-  width: 1440px;
-  /* width: 320px; */
+  font-size: 18px;
+  /* width: 1440px; desktop */
+  width: 320px;
   text-align: center;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  display: flex;
 }
 
 .page-header .container {
@@ -101,7 +103,8 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  height: 72px;
+  /* height: 72px; desktop */
+  height: 56px;
 }
 
 .page-nav {
@@ -136,7 +139,8 @@ img {
 }
 
 .page-nav .list {
-  display: flex;
+  display: none;
+  /* display: flex; desktop */
   gap: 40px;
   padding-bottom: 24px;
   color: #404bbf;
@@ -176,7 +180,8 @@ img {
 
 .page-address .page-address-list {
   font-style: normal;
-  display: flex;
+  /* display: flex; desktop */
+  display: none;
   gap: 40px;
   margin-left: 332px;
 }
@@ -200,6 +205,21 @@ img {
 .page-address .link:hover,
 .page-address .link:focus {
   color: #404bbf;
+}
+
+/* added for mobile ver */
+.container-menu {
+  padding: 16px 16px 16px 0;
+}
+
+.menu-icon {
+  fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-icon:hover,
+.menu-icon:focus {
+  fill: #4d5ae5;
 }
 
 /* ..................................... */
@@ -1022,6 +1042,47 @@ img {
 /* ............TABLET VERSION............ */
 
 @media screen and (min-width: 768px) {
+  /* .............page header................ */
+  .page-header {
+    width: 768px;
+    font-size: 56px;
+  }
+
+  .page-header .container {
+    height: 72px;
+  }
+
+  .page-nav .list {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 24px;
+    color: #404bbf;
+  }
+
+  .page-address .page-address-list {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    /* gap: 40px; desktop */
+    gap: 12px;
+    /* margin-left: 332px; desktop */
+    margin-left: 122px;
+    /* height: 72px; */
+  }
+
+  .page-address .link {
+    padding: 16px 0;
+  }
+
+  .container-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  /* ..................................... */
   /* .............page title................ */
   .page-title {
     max-width: 768px;
