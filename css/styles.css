@@ -33,12 +33,12 @@ section {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 156px;
-  margin-right: 156px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 img {
@@ -89,7 +89,6 @@ img {
   background-color: #ffffff;
   font-size: 56px;
   font-size: 18px;
-  width: 320px;
   text-align: center;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -99,17 +98,16 @@ img {
 
 .page-header .container {
   display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  height: 56px;
+  justify-content: space-between;
+  max-height: 56px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .page-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
@@ -201,10 +199,6 @@ img {
 .page-address .link:hover,
 .page-address .link:focus {
   color: #404bbf;
-}
-
-.container-menu {
-  padding: 16px 16px 16px 0;
 }
 
 .menu-icon {
@@ -379,7 +373,6 @@ img {
   background-size: cover;
   font-weight: 700;
   font-size: 56px;
-  max-width: 320px;
   padding: 72px 0;
 }
 
@@ -398,9 +391,8 @@ img {
 
 .page-title .container {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
   max-width: 216px;
+  padding: 0;
 }
 
 .heading-first {
@@ -440,18 +432,15 @@ img {
 }
 
 /* ..................................... */
-
-/* .............section features................ */
+/* .............section features........ */
 
 .section-features {
-  width: 320px;
   padding: 96px 0;
 }
 
 .section-features .container {
-  margin-right: 16px;
-  margin-left: 16px;
   width: 288px;
+  padding: 0;
 }
 
 .section-features .visually-hidden {
@@ -507,13 +496,12 @@ img {
   height: 72px;
   padding-bottom: 0;
 }
-/* ..................................... */
 
-/* .............section team................ */
+/* ..................................... */
+/* .............section team............ */
 
 .section-team {
   background-color: #f4f4fd;
-  width: 320px;
   text-align: center;
   padding-bottom: 96px;
   padding-top: 96px;
@@ -523,6 +511,7 @@ img {
   width: 264px;
   margin-left: 28px;
   margin-right: 28px;
+  padding: 0;
 }
 
 .section-team .heading-second {
@@ -596,18 +585,17 @@ img {
 }
 
 /* ..................................... */
-
-/* .............section portfolio................ */
+/* ............section portfolio........ */
 
 .section-portfolio {
   background-color: #ffffff;
   padding-top: 0;
   padding-bottom: 96px;
   padding-top: 96px;
-  width: 320px;
 }
 
 .section-portfolio .container {
+  padding: 0;
   width: 288px;
   margin-left: calc((320px - 288px) / 2);
   margin-right: calc((320px - 288px) / 2);
@@ -687,12 +675,10 @@ img {
 }
 
 /* ..................................... */
-
 /* .............page footer................ */
 
 .page-footer {
   background-color: #2e2f42;
-  width: 320px;
   padding: 96px 0;
 }
 
@@ -700,11 +686,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 72px;
-  margin-left: 16px;
-  margin-right: 16px;
   justify-content: center;
   align-items: center;
   width: 288px;
+  padding: 0;
 }
 
 .page-footer .container-logo {
@@ -740,6 +725,7 @@ img {
   height: 80px;
   margin-left: 0;
   margin-right: 0;
+  padding: 0;
 }
 
 .page-footer .paragraf-soc {
@@ -875,7 +861,6 @@ img {
 }
 
 /* ..................................... */
-
 /* ................modal................ */
 
 .backdrop {
@@ -1131,14 +1116,16 @@ img {
 /* ............TABLET VERSION............ */
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
   /* .............page header................ */
   .page-header {
-    width: 768px;
     font-size: 56px;
   }
 
   .page-header .container {
-    height: 72px;
+    max-height: 72px;
   }
 
   .page-nav .list {
@@ -1154,11 +1141,9 @@ img {
     justify-content: center;
     gap: 12px;
     margin-left: 122px;
-    height: 72px;
   }
 
   .page-address .link {
-    padding: 16px 0;
     padding: 0;
     font-size: 12px;
     line-height: 1.2;
@@ -1176,7 +1161,6 @@ img {
   /* ..................................... */
   /* .............page title................ */
   .page-title {
-    max-width: 768px;
     padding: 112px 0;
     background-image: linear-gradient(
         to bottom,
@@ -1201,6 +1185,7 @@ img {
 
   .page-title .container {
     max-width: 496px;
+    padding: 0;
   }
 
   .heading-first {
@@ -1213,9 +1198,8 @@ img {
     margin-top: 36px;
   }
   /* ..................................... */
-  /* .............section features.... */
+  /* .............section features........ */
   .section-features {
-    width: 768px;
     padding: 96px 16px;
   }
 
@@ -1244,13 +1228,9 @@ img {
     width: 356px;
   }
   /* ................................. */
-  /* .............section team... .... */
-  .section-team {
-    width: 768px;
-  }
-
+  /* .............section team........ */
   .section-team .container {
-    width: 528px;
+    width: 552px;
     margin-left: 108px;
     margin-right: 108px;
   }
@@ -1268,11 +1248,7 @@ img {
   }
 
   /* ................................. */
-
   /* ........section portfolio....... */
-  .section-portfolio {
-    width: 768px;
-  }
 
   .section-portfolio .container {
     width: 736px;
@@ -1298,10 +1274,7 @@ img {
   }
 
   /* ............................... */
-  /* .............page footer................ */
-  .page-footer {
-    width: 768px;
-  }
+  /* .............page footer........ */
 
   .page-footer > .container {
     margin-left: 108px;
@@ -1359,7 +1332,6 @@ img {
   }
 
   /* ..................................... */
-
   /* ................modal................ */
 
   .modal {
@@ -1382,27 +1354,37 @@ img {
   .modal-send-btn {
     margin: 0 auto;
   }
-  /* ..................................... */
 }
+/* ..................................... */
 
 /* ............DESKTOP VERSION............ */
 
 @media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   /* .............page header................ */
   .page-header {
-    width: 1440px;
+    max-width: 1440px;
+  }
+
+  .page-header .container {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .page-address .page-address-list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 40px;
     margin-left: 332px;
     height: 72px;
   }
 
   .page-address .link {
-    padding: 24px 0;
     height: 24px;
     font-size: 16px;
     line-height: 1.5;
@@ -1418,7 +1400,6 @@ img {
   }
 
   /* ..................................... */
-
   /* .............page title................ */
   .page-title {
     max-width: 1440px;
@@ -1447,19 +1428,18 @@ img {
   .page-button {
     margin-top: 48px;
   }
+
   /* ..................................... */
   /* ........section features........ */
   .section-features {
-    width: 1440px;
-    padding: 0;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    max-width: 1440px;
+    padding: 120px 0;
   }
 
   .section-features .container {
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 100%;
   }
 
   .section-features .list {
@@ -1497,11 +1477,11 @@ img {
     font-weight: 400;
     width: 264px;
   }
-  /* ................................. */
 
+  /* ................................. */
   /* .............section team... .... */
   .section-team {
-    width: 1440px;
+    max-width: 1440px;
   }
 
   .section-team .container {
@@ -1522,12 +1502,11 @@ img {
   }
 
   /* ................................. */
-
   /* ........section portfolio....... */
   .section-portfolio {
     padding-bottom: 120px;
     padding-top: 120px;
-    width: 1440px;
+    max-width: 1440px;
   }
 
   .section-portfolio .container {
@@ -1555,18 +1534,18 @@ img {
   /* ............................... */
   /* .............page footer................ */
   .page-footer {
-    width: 1440px;
+    max-width: 1440px;
     padding: 100px 0;
   }
 
   .page-footer > .container {
-    margin-left: 156px;
-    margin-right: 156px;
+    width: 1125px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .page-footer .container-footer {
     display: flex;
-    justify-content: center;
     align-items: baseline;
     flex-wrap: nowrap;
     gap: 0;
@@ -1587,7 +1566,7 @@ img {
   .container-subscr {
     display: flex;
     margin-left: 80px;
-    width: 100%;
+    width: 456px;
     height: 100%;
   }
 
