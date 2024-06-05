@@ -25,6 +25,7 @@ body {
   color: #434455;
   font-weight: 400;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 section {
